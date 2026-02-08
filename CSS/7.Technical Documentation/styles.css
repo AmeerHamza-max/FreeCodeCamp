@@ -1,0 +1,36 @@
+body{
+  margin:0;
+  display:flex;
+  font-family:Arial;
+}
+
+#navbar{
+  position:fixed;
+  left:0;
+  top:0;
+  width:220px;
+  height:100vh;
+  background:#f2f2f2;
+  padding:10px;
+}
+
+#navbar a{
+  display:block;
+  margin:10px 0;
+}
+
+#main-doc{
+  margin-left:240px;
+  padding:20px;
+}
+
+@media(max-width:768px){
+  #navbar{
+    position:relative;
+    width:100%;
+    height:auto;
+  }
+  #main-doc{
+    margin-left:0;
+  }
+}
