@@ -1,15 +1,23 @@
-````md
+Bilkul — neeche **clean, directly copy-paste ready Markdown** diya hua hai.
+
+Isay seedha `notes.md` ya `README.md` mein paste karo.
+Koi extra backticks ya wrapping nahi hai — file proper render hogi.
+
+---
+
 # Working with the Number Data Type in JavaScript
 
 ## Definition
-JavaScript's `Number` type includes:
-- Integers  
-- Floating-point numbers (numbers with a decimal point)  
-- `Infinity` and `-Infinity`  
-- `NaN` (Not a Number)
 
-**Infinity** represents a number greater than any other number.  
-**-Infinity** represents a number smaller than any other number.  
+JavaScript's `Number` type includes:
+
+* Integers
+* Floating-point numbers (numbers with a decimal point)
+* `Infinity` and `-Infinity`
+* `NaN` (Not a Number)
+
+**Infinity** represents a number greater than any other number.
+**-Infinity** represents a number smaller than any other number.
 **NaN** represents an invalid numeric value, such as attempting to convert the string `"Jessica"` into a number.
 
 ---
@@ -17,42 +25,49 @@ JavaScript's `Number` type includes:
 ## Common Arithmetic Operations
 
 ### Addition Operator (`+`)
+
 Used to calculate the sum of two or more numbers.
 
 ### Subtraction Operator (`-`)
+
 Used to calculate the difference between two numbers.
 
 ### Multiplication Operator (`*`)
+
 Used to calculate the product of two or more numbers.
 
 ### Division Operator (`/`)
+
 Used to calculate the quotient between two numbers.
 
 ### Division by Zero
-If you try to divide by zero, JavaScript will return `Infinity`.
+
+If you divide by zero, JavaScript returns `Infinity`.
 
 ### Remainder Operator (`%`)
+
 Returns the remainder of a division.
 
 ### Exponentiation Operator (`**`)
+
 Raises one number to the power of another.
 
 ---
 
 ## Calculations with Numbers and Strings
 
-### Explanation
-- Using the `+` operator with a number and a string causes JavaScript to **coerce the number into a string** and concatenate the values.
-- Using `-`, `*`, or `/` with a string and a number causes JavaScript to **coerce the string into a number**.
-- `null` is treated as `0` in mathematical operations.
-- `undefined` is treated as `NaN` in mathematical operations.
+### Key Rules
+
+* `+` with a number and string → converts number to string (concatenation happens).
+* `-`, `*`, `/` with string and number → converts string to number.
+* `null` is treated as `0` in math operations.
+* `undefined` is treated as `NaN`.
 
 ```js
 const result = 5 + '10';
-
 console.log(result); // "510"
 console.log(typeof result); // string
-````
+```
 
 ```js
 const subtractionResult = '10' - 5;
@@ -88,13 +103,13 @@ console.log(typeof result2); // number
 
 ## Operator Precedence
 
-### Definition
+Operator precedence defines execution order.
 
-Operator precedence determines the order in which operations are evaluated in an expression.
+Rules:
 
-* Parentheses are evaluated first
-* Multiplication and division have higher precedence than addition and subtraction
-* If operators have the same precedence, associativity is used
+* Parentheses execute first.
+* Multiplication and division before addition and subtraction.
+* Same precedence → associativity decides direction.
 
 ```js
 const result = (2 + 3) * 4;
@@ -115,14 +130,10 @@ console.log(result3); // 512
 
 ## Associativity
 
-### Definition
+Associativity determines evaluation direction when operators share precedence.
 
-Associativity determines the direction in which an expression is evaluated when operators of the same precedence are present.
-
-* Left-to-right (left-associative)
-* Right-to-left (right-associative)
-
-The exponentiation operator (`**`) is right-associative:
+* Most operators → left-to-right
+* Exponentiation (`**`) → right-to-left
 
 ```js
 const result4 = 5 ** 4 ** 1;
@@ -133,32 +144,27 @@ console.log(result4); // 625
 
 ## Increment and Decrement Operators
 
-### Increment Operator (`++`)
+### Increment (`++`)
 
-* Prefix: increments first, then returns the value
-* Postfix: returns the value first, then increments
+* Prefix: increments first
+* Postfix: increments after returning value
 
 ```js
 let x = 5;
-
 console.log(++x); // 6
 console.log(x); // 6
 ```
 
 ```js
 let y = 5;
-
 console.log(y++); // 5
 console.log(y); // 6
 ```
 
-### Decrement Operator (`--`)
-
-* Works the same way as the increment operator
+### Decrement (`--`)
 
 ```js
 let num = 5;
-
 console.log(--num); // 4
 console.log(num--); // 4
 console.log(num); // 3
@@ -168,106 +174,107 @@ console.log(num); // 3
 
 ## Compound Assignment Operators
 
-* Addition Assignment (`+=`)
-* Subtraction Assignment (`-=`)
-* Multiplication Assignment (`*=`)
-* Division Assignment (`/=`)
-* Remainder Assignment (`%=`)
-* Exponentiation Assignment (`**=`)
+* `+=`
+* `-=`
+* `*=`
+* `/=`
+* `%=`
+* `**=`
 
-These operators perform the operation and assign the result to the variable.
+Example:
+
+```js
+let num = 10;
+num += 5;
+console.log(num); // 15
+```
 
 ---
 
 ## Booleans and Equality
 
-### Boolean Definition
+A Boolean has two values:
 
-A boolean can only have two values: `true` or `false`.
+* `true`
+* `false`
 
-### Equality Operator (`==`)
+### Equality (`==`)
 
-Uses type coercion before comparison.
+Performs type coercion.
 
 ```js
 console.log(5 == '5'); // true
 ```
 
-### Strict Equality Operator (`===`)
+### Strict Equality (`===`)
 
-Does not use type coercion. Checks both type and value.
+Checks both value and type.
 
 ```js
 console.log(5 === '5'); // false
 ```
 
-### Inequality Operator (`!=`)
+### Inequality
 
-Uses type coercion.
-
-### Strict Inequality Operator (`!==`)
-
-Does not use type coercion.
+* `!=` (loose)
+* `!==` (strict)
 
 ---
 
 ## Comparison Operators
 
-* Greater Than (`>`)
-* Greater Than or Equal (`>=`)
-* Less Than (`<`)
-* Less Than or Equal (`<=`)
+* `>`
+* `>=`
+* `<`
+* `<=`
 
 ---
 
 ## Unary Operators
 
-### Unary Plus (`+`)
+### Unary Plus
 
-Converts its operand into a number.
+Converts value to number.
 
 ```js
 const str = '42';
 const num = +str;
-
 console.log(num); // 42
 console.log(typeof num); // number
 ```
 
-### Unary Negation (`-`)
-
-Negates the operand.
+### Unary Negation
 
 ```js
 const num = 4;
 console.log(-num); // -4
 ```
 
-### Logical NOT (`!`)
+### Logical NOT
 
-Flips the boolean value of its operand.
+```js
+console.log(!true); // false
+console.log(!0); // true
+```
 
 ---
 
 ## Bitwise Operators
 
-* Bitwise AND (`&`)
-* Bitwise AND Assignment (`&=`)
-* Bitwise OR (`|`)
-* Bitwise OR Assignment (`|=`)
-* Bitwise XOR (`^`)
-* Bitwise NOT (`~`)
-* Left Shift (`<<`)
-* Right Shift (`>>`)
+* `&`
+* `&=`
+* `|`
+* `|=`
+* `^`
+* `~`
+* `<<`
+* `>>`
 
 ---
 
-## Conditional Statements, Truthy & Falsy Values, and the Ternary Operator
+## Conditional Statements
 
 ### if / else if / else
-
-Truthy values evaluate to `true` in a Boolean context.
-Falsy values evaluate to `false`.
 
 ```js
 const score = 87;
@@ -275,33 +282,29 @@ const score = 87;
 if (score >= 90) {
   console.log('You got an A');
 } else if (score >= 80) {
-  console.log('You got a B'); // You got a B
+  console.log('You got a B');
 } else if (score >= 70) {
   console.log('You got a C');
 } else {
-  console.log('You failed! You need to study more!');
+  console.log('You failed');
 }
-```
-
-### Ternary Operator
-
-A shorter alternative to `if...else`.
-
-```js
-const temperature = 30;
-const weather = temperature > 25 ? 'sunny' : 'cool';
-
-console.log(`It's a ${weather} day!`); // It's a sunny day!
 ```
 
 ---
 
-## Binary Logical Operators
+## Ternary Operator
+
+```js
+const temperature = 30;
+const weather = temperature > 25 ? 'sunny' : 'cool';
+console.log(`It's a ${weather} day!`);
+```
+
+---
+
+## Logical Operators
 
 ### Logical AND (`&&`)
-
-Returns the second operand if both are truthy.
-Returns the first falsy value otherwise.
 
 ```js
 const result = true && 'hello';
@@ -310,45 +313,38 @@ console.log(result); // hello
 
 ### Logical OR (`||`)
 
-Returns the first truthy operand.
+Returns first truthy value.
 
 ### Nullish Coalescing (`??`)
-
-Returns the right-hand value only if the left-hand value is `null` or `undefined`.
 
 ```js
 const userSettings = {
   theme: null,
-  volume: 0,
-  notifications: false,
 };
 
-let theme = userSettings.theme ?? 'light';
+const theme = userSettings.theme ?? 'light';
 console.log(theme); // light
 ```
 
 ---
 
-## The Math Object
+## Math Object
 
-* `Math.random()` – Returns a random number between 0 (inclusive) and 1 (exclusive)
-* `Math.max()` – Returns the maximum value
-* `Math.min()` – Returns the minimum value
-* `Math.ceil()` – Rounds up
-* `Math.floor()` – Rounds down
-* `Math.round()` – Rounds to the nearest integer
+* `Math.random()`
+* `Math.max()`
+* `Math.min()`
+* `Math.ceil()`
+* `Math.floor()`
+* `Math.round()`
+* `Math.trunc()`
+* `Math.sqrt()`
+* `Math.cbrt()`
+* `Math.abs()`
+* `Math.pow()`
 
 ```js
-console.log(Math.round(2.3)); // 2
-console.log(Math.round(4.5)); // 5
 console.log(Math.round(4.8)); // 5
 ```
-
-* `Math.trunc()` – Removes the decimal part
-* `Math.sqrt()` – Returns the square root
-* `Math.cbrt()` – Returns the cube root
-* `Math.abs()` – Returns the absolute value
-* `Math.pow()` – Raises a number to a power
 
 ---
 
@@ -356,37 +352,22 @@ console.log(Math.round(4.8)); // 5
 
 ### isNaN()
 
-Checks whether a value is NaN.
-`Number.isNaN()` is more reliable than the global `isNaN()`.
-
 ```js
-console.log(isNaN(NaN));        // true
-console.log(isNaN(undefined)); // true
-console.log(isNaN({}));        // true
-
-console.log(isNaN(true));      // false
-console.log(isNaN(null));      // false
-console.log(isNaN(37));        // false
-```
-
-```js
-console.log(Number.isNaN(NaN));        // true
-console.log(Number.isNaN(Number.NaN)); // true
-console.log(Number.isNaN(0 / 0));      // true
-
-console.log(Number.isNaN("NaN"));      // false
-console.log(Number.isNaN(undefined));  // false
+console.log(Number.isNaN(NaN)); // true
+console.log(Number.isNaN("NaN")); // false
 ```
 
 ### parseFloat()
 
-Parses a string and returns a floating-point number.
+Converts string to floating number.
 
 ### parseInt()
 
-Parses a string and returns an integer. Stops parsing at the first non-digit character.
+Converts string to integer (stops at first non-digit).
 
 ### toFixed()
 
-Formats a number using fixed-point notation and returns a string.
+Formats number to fixed decimal places.
+
+---
 
