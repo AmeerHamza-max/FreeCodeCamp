@@ -1,8 +1,3 @@
-Bilkul — neeche **clean, directly copy-paste ready Markdown** diya hua hai.
-
-Isay seedha `notes.md` ya `README.md` mein paste karo.
-Koi extra backticks ya wrapping nahi hai — file proper render hogi.
-
 ---
 
 # Working with the Number Data Type in JavaScript
