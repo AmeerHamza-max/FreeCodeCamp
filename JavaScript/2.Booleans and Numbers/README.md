@@ -362,9 +362,6 @@ Converts string to integer (stops at first non-digit).
 ### toFixed()
 
 Formats number to fixed decimal places.
-
----
-
 Comparisons and the null and undefined Data Types
 Comparisons and undefined: A variable is undefined when it has been declared but hasn't been assigned a value. It's the default value of uninitialized variables and function parameters that weren't provided an argument. undefined converts to NaN in numeric contexts, which makes all numeric comparisons with undefined return false.
 console.log(undefined < 0); // false (NaN < 0 is false)
@@ -409,4 +406,8 @@ switch (dayOfWeek) {
 }
 
 
+
+
+
+---
 
