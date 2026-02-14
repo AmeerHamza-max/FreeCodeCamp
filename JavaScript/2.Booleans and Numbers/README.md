@@ -362,21 +362,49 @@ Converts string to integer (stops at first non-digit).
 ### toFixed()
 
 Formats number to fixed decimal places.
-Comparisons and the null and undefined Data Types
-Comparisons and undefined: A variable is undefined when it has been declared but hasn't been assigned a value. It's the default value of uninitialized variables and function parameters that weren't provided an argument. undefined converts to NaN in numeric contexts, which makes all numeric comparisons with undefined return false.
+# Comparisons and the null and undefined Data Types
+
+## Comparisons and undefined
+
+A variable is undefined when it has been declared but hasn't been assigned a value. It's the default value of uninitialized variables and function parameters that weren't provided an argument. undefined converts to NaN in numeric contexts, which makes all numeric comparisons with undefined return false.
+
+```js
 console.log(undefined < 0); // false (NaN < 0 is false)
 console.log(undefined >= 0); // false (NaN >= 0 is false)
-Comparisons and null: The null type represents the intentional absence of a value. null converts to 0 in numeric contexts, which may result in unexpected behavior in numeric comparisons:
+```
+
+## Comparisons and null
+
+The null type represents the intentional absence of a value. null converts to 0 in numeric contexts, which may result in unexpected behavior in numeric comparisons:
+
+```js
 console.log(null < 0); // false (0 < 0 is false)
 console.log(null >= 0); // true (0 >= 0 is true)
+```
+
+## Equality operators
+
 When using the equality operator (==), null and undefined only equal each other and themselves:
+
+```js
 console.log(null == undefined); // true
 console.log(null == 0); // false
 console.log(undefined == NaN); // false
+```
+
 However, when using the strict equality operator (===), which checks both value and type without performing type coercion, null and undefined are not equal:
+
+```js
 console.log(null === undefined); // false
-switch Statements
-Definition: A switch statement evaluates an expression and matches its value against a series of case clauses. When a match is found, the code block associated with that case is executed. A break statement should be placed at the end of each case, to terminate its execution and continue with the next. The default case is an optional case and only executes if none of the other cases match. The default case is placed at the end of a switch statement.
+```
+
+# switch Statements
+
+## Definition
+
+A switch statement evaluates an expression and matches its value against a series of case clauses. When a match is found, the code block associated with that case is executed. A break statement should be placed at the end of each case, to terminate its execution and continue with the next. The default case is an optional case and only executes if none of the other cases match. The default case is placed at the end of a switch statement.
+
+```js
 const dayOfWeek = 3; 
 
 switch (dayOfWeek) {
@@ -404,10 +432,7 @@ switch (dayOfWeek) {
   default:
     console.log("Invalid day! Please enter a number between 1 and 7.");
 }
-
-
-
-
+```
 
 ---
 
