@@ -1,4 +1,4 @@
----
+
 
 # Working with the Number Data Type in JavaScript
 
@@ -15,7 +15,6 @@ JavaScript's `Number` type includes:
 **-Infinity** represents a number smaller than any other number.
 **NaN** represents an invalid numeric value, such as attempting to convert the string `"Jessica"` into a number.
 
----
 
 ## Common Arithmetic Operations
 
